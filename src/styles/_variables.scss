@@ -1,0 +1,41 @@
+// Remove the @forward line and just define variables
+$font-sans: var(--font-geist-sans), 'Helvetica Neue', sans-serif !default;
+$font-mono: var(--font-geist-mono), monospace !default;
+
+// breakpoints
+$breakpoint-sm: 480px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1024px !default;
+$breakpoint-xl: 1200px !default;
+
+// Spacing
+$spacing-xs: 0.25rem !default;
+$spacing-sm: 0.5rem !default;
+$spacing-md: 1rem !default;
+$spacing-lg: 1.5rem !default;
+$spacing-xl: 2rem !default;
+$spacing-2xl: 3rem !default;
+
+// core colors
+$color-background: #f9f9fb !default;
+$color-surface: #ffffff !default;
+$color-text-primary: #121212 !default;
+$color-text-secondary: #5c5f66 !default;
+$color-border: #e2e4e8 !default;
+
+// supporting colors
+$color-success: #3ebd93 !default;
+$color-warning: #f4b740 !default;
+$color-error: #e65f5c !default;
+$color-info: #4dabf7 !default;
+
+// accent colors
+$color-accent: #1a1a1a !default;
+$color-accent-hover: #1a1a1a !default;
+$color-accent-light: #dcedc8 !default;
+
+// Z-index layers
+$z-base: 1 !default;
+$z-header: 100 !default;
+$z-modal: 1000 !default;
+$z-overlay: 900 !default;

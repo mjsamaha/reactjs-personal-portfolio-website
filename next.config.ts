@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  sassOptions: {
+    includePaths: ['./src/styles'],
+    prependData: `@use "src/styles/variables" as *;`
+  }
 };
 
 export default nextConfig;

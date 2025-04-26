@@ -1,0 +1,56 @@
+@use '../variables' as *;
+
+.wrapper {
+    padding: $spacing-2xl 0;
+    background-color: $color-surface;
+}
+
+.title {
+    font-family: $font-sans;
+    font-weight: 900;
+    margin-bottom: $spacing-md;
+    text-align: center;
+}
+
+.highlight {
+    position: relative;
+    background-color: rgba($color-accent, 0.1);
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+
+.description {
+    text-align: center;
+    margin-top: $spacing-xs;
+    max-width: 600px;
+    margin: $spacing-md auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-md;
+    padding: $spacing-md;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.itemTitle {
+    margin-top: $spacing-sm;
+    color: $color-text-primary;
+}
+
+.supTitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: $color-accent;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-xs;
+}

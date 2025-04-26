@@ -9,7 +9,8 @@
 ![image](https://github.com/user-attachments/assets/06a6a02f-16d3-4a8d-aeea-0a04511dba1f)
 
 **Resume Portion**
-![image](https://github.com/user-attachments/assets/7630cb06-2830-479f-8ada-830bc1ee403c)
+![image](https://github.com/user-attachments/assets/d2601a96-4ad6-4845-a313-6c9b81d13ebe)
+
 
 - Still need to add education + experience section
 

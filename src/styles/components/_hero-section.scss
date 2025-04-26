@@ -1,0 +1,119 @@
+@use '../variables' as *;
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    background: linear-gradient(
+        to bottom,
+        rgba($color-background, 0.8),
+        rgba($color-background, 1)
+    );
+
+    &__container {
+        width: 100%;
+        max-width: min($breakpoint-xl, 95vw);
+        margin: 0 auto;
+        padding: clamp($spacing-lg, 5vh, $spacing-2xl) $spacing-md;
+    }
+
+    &__content {
+        max-width: min(800px, 100%);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: clamp($spacing-lg, 3vh, $spacing-xl);
+        color: $color-text-primary;
+    }
+
+    &__highlight {
+        color: $color-text-primary;
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0.2em;
+            left: 0;
+            width: 100%;
+            height: 0.1em;
+            background-color: $color-accent;
+            z-index: -1;
+        }
+    }
+
+    &__description {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: $color-text-primary;
+        margin-bottom: clamp($spacing-xl, 4vh, $spacing-2xl);
+        line-height: 1.6;
+        max-width: 65ch;
+    }
+
+    &__skills {
+        display: grid;
+        gap: clamp($spacing-lg, 4vh, $spacing-xl);
+        
+        @media (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+    }
+
+    &__skill-group {
+        background: rgba($color-surface, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba($color-border, 0.2);
+        border-radius: 12px;
+        padding: clamp($spacing-md, 3vh, $spacing-lg);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba($color-text-primary, 0.1);
+        }
+    }
+
+    &__skill-title {
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
+        color: $color-text-primary;
+        margin-bottom: clamp($spacing-sm, 2vh, $spacing-md);
+        font-weight: 600;
+    }
+
+    &__skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp($spacing-xs, 1vw, $spacing-sm);
+    }
+
+    &__skill-item {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        padding: clamp($spacing-xs, 1vh, $spacing-sm) clamp($spacing-sm, 2vw, $spacing-md);
+        background: $color-surface;
+        border: 1px solid $color-border;
+        border-radius: 6px;
+        font-size: clamp(0.875rem, 1.5vw, 0.9rem);
+        color: $color-text-primary;
+        transition: all 0.2s ease;
+
+        svg {
+            width: clamp(16px, 1.5vw, 20px);
+            height: auto;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($color-text-primary, 0.1);
+            background: $color-accent;
+            color: $color-surface;
+        }
+    }
+}

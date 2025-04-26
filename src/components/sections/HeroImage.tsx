@@ -17,7 +17,7 @@ export default function HeroImage() {
           <div className="hero__overlay" />
         </div>
         <div className="hero__content">
-          <h1 className="hero__title">Matthew Samaha Portfolio</h1>
+          <h1 className="hero__title">Matthew Samaha&apos;s Portfolio</h1>
           <p className="hero__subtitle">Capturing Nature&apos;s Winged Wonders</p>
         </div>
       </section>

@@ -5,6 +5,13 @@
     background-color: $color-surface;
 }
 
+// Add this new style
+.supTitle {
+    &:not(:first-child) {
+        margin-top: $spacing-2xl;
+    }
+}
+
 .title {
     font-family: $font-sans;
     font-weight: 900;

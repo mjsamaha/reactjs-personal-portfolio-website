@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from 'react';
 import { Container, SimpleGrid, Text, ThemeIcon } from '@mantine/core';
 import { FaJava } from 'react-icons/fa';
 import { SiSpringboot } from 'react-icons/si';
@@ -31,26 +32,51 @@ const techStack = [
 
   
 export function FeatureSection() {
-    const items = techStack.map((item) => (
-        <div className="item" key={item.title}>
-          <ThemeIcon 
-            variant="light" 
-            className="itemIcon" 
-            size={60} 
-            radius="md"
-            color="blue"
-          >
-            {item.icon}
-          </ThemeIcon>
-    
-          <div>
-            <Text fw={700} fz="lg" className="itemTitle">
-              {item.title}
-            </Text>
-            <Text c="dimmed">{item.description}</Text>
-          </div>
-        </div>
-      ));
+  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    itemsRef.current.forEach((item) => {
+      if (item) observer.observe(item);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const items = techStack.map((item, index) => (  // Added index parameter
+    <div 
+      className="item" 
+      key={item.title}
+      ref={el => { itemsRef.current[index] = el; }}  // Fixed ref
+    >
+      <ThemeIcon 
+        variant="light" 
+        className="itemIcon" 
+        size={60} 
+        radius="md"
+        color="blue"
+      >
+        {item.icon}
+      </ThemeIcon>
+
+      <div>
+        <Text fw={700} fz="lg" className="itemTitle">
+          {item.title}
+        </Text>
+        <Text c="dimmed">{item.description}</Text>
+      </div>
+    </div>
+  ));
   
       return (
         <Container size={700} className="wrapper">

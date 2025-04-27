@@ -3,20 +3,22 @@
 import { useEffect, useRef } from 'react';
 import { Container, SimpleGrid, Text, ThemeIcon } from '@mantine/core';
 import { FaJava } from 'react-icons/fa';
-import { SiSpringboot } from 'react-icons/si';
 import { SiTypescript, SiNextdotjs } from 'react-icons/si';
-import { IoSchoolOutline } from 'react-icons/io5';
-import { MdWork } from 'react-icons/md';
+import { FaSchool } from "react-icons/fa6";
+import { IoMdCodeWorking } from "react-icons/io";
+import { MdOutlineWorkHistory } from "react-icons/md";
+import { MdWorkHistory } from "react-icons/md";
+import { BiLogoSpringBoot } from "react-icons/bi";
 
 
 const education = [
   {
-    icon: <IoSchoolOutline size={30} />,
+    icon: <FaSchool  size={30} />,
     title: 'Computer Systems Technology',
     description: 'Sheridan College, Expected Graduation 2027',
   },
   {
-    icon: <IoSchoolOutline size={30} />,
+    icon: <IoMdCodeWorking  size={30} />,
     title: 'Relevant Coursework',
     description: 'Python ML & AI, Linux, Enterprise Java Development, Data Structures & Algortihms',
   },
@@ -25,12 +27,12 @@ const education = [
 
 const experience = [
   {
-    icon: <MdWork size={30} />,
+    icon: <MdWorkHistory size={30} />,
     title: 'Sailor',
     description: 'Canadian Armed Forces - Trained in signal communications...',
   },
   {
-    icon: <MdWork size={30} />,
+    icon: <MdOutlineWorkHistory  size={30} />,
     title: 'Volunteer/Instructor',
     description: 'Oakville Sea Cadets - Currently peer-developping an inventory management system for the unit',
   },
@@ -46,7 +48,7 @@ const techStack = [
       description: 'Experience in Java development with focus on backend services and application architecture.',
     },
     {
-      icon: <SiSpringboot size={30} />,
+      icon: <BiLogoSpringBoot  size={30} />,
       title: 'Spring Boot',
       description: 'Building robust and scalable web applications the using Spring Boot framework.',
     },
